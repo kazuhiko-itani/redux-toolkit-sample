@@ -21,7 +21,7 @@ export class ActionDispatcher {
     const promise = new Promise(resolve => {
       setTimeout(() => {
         resolve();
-      });
+      }, 1000);
     });
 
     promise.then(() => {
@@ -33,7 +33,7 @@ export class ActionDispatcher {
     const promise = new Promise(resolve => {
       setTimeout(() => {
         resolve();
-      });
+      }, 1000);
     });
 
     promise.then(() => {

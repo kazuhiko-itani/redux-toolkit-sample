@@ -7,6 +7,10 @@ type Props = {
   actions: ActionDispatcher;
 };
 
+interface HTMLElementEvent<T extends HTMLElement> extends Event {
+  target: T;
+}
+
 export const TodoList: React.FC<Props> = props => {
   const [task, setTask] = React.useState("");
 
