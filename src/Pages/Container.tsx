@@ -16,6 +16,30 @@ export class ActionDispatcher {
   public clearTask() {
     this.dispatch(clearTask());
   }
+
+  public async asyncAddTask(task: string) {
+    const promise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+      });
+    });
+
+    promise.then(() => {
+      this.dispatch(addTask({ task }));
+    });
+  }
+
+  public async asyncClearTask() {
+    const promise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+      });
+    });
+
+    promise.then(() => {
+      this.dispatch(clearTask());
+    });
+  }
 }
 
 export default connect(
