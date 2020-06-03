@@ -24,7 +24,11 @@ export const TodoList: React.FC<Props> = props => {
       {props.value.todoList.map(todo => {
         return <div key={todo.id}>{todo.task}</div>;
       })}
-      <input value={task} type="text" onChange={e => setTask(e.target.value)} />
+      <input
+        value={task}
+        type="text"
+        onChange={(e: any) => setTask(e.target.value)}
+      />
       <button onClick={addTask}>Add Task</button>
       <button onClick={clearTask}>Clear Task</button>
     </div>
