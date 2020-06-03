@@ -16,14 +16,39 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack-dev-server",
+    "test": "npx jest",
     "typecheck": "tsc -p . --noEmit"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.3.6",
+    "@types/jest": "^25.2.3",
     "@types/react-redux": "^7.1.9",
     "jest": "^26.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-redux": "^7.2.0"
+    "react-redux": "^7.2.0",
+    "ts-jest": "^26.1.0"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.jest.json"
+      }
+    },
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testURL": "http://localhost/",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(ts?|jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "png",
+      "svg",
+      "node"
+    ]
   }
 }

@@ -9,7 +9,7 @@ export type TodoState = {
   todoList: Todo[];
 };
 
-const initialState: TodoState = {
+export const initialState: TodoState = {
   todoList: []
 };
 
